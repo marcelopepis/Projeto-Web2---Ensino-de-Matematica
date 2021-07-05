@@ -9,11 +9,11 @@ import {
   SideBtnWrap,
   SidebarRouter
   } from './SidebarElements';
-const Sidebar = () => {
+const Sidebar = ({isOpen, toggle}) => {
   return (
     <>
-      <SidebarContainer>
-        <Icon>
+      <SidebarContainer isOpen={isOpen} onClick={toggle} >
+        <Icon onClick={toggle}>
           <CloseIcon></CloseIcon>
         </Icon>
         <SidebarWrapper>
