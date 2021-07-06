@@ -1,0 +1,23 @@
+.rep{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.rep2{
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
+    transform: scale(0.8);
+}
+
+.zoom{
+    transition: transform .2s;
+}
+.zoom:hover {
+    transform: scale(1.15);
+}
