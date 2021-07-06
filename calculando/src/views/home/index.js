@@ -26,7 +26,7 @@ const Home = () => {
   }
 
   var n1 = 0;
-  var n2;
+  var n2 = 0;
 
   return (
     <>
@@ -51,7 +51,7 @@ const Home = () => {
           </tr>
           <tr>
             <td></td>
-            <td><img src={zero} alt="logo" className="center zoom" id="zero" onClick={n1 = 0}/></td>
+            <td><img src={zero} alt="logo" className="center zoom" id="zero"/></td>
             <td></td>
           </tr>
         </table>
