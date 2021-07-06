@@ -17,7 +17,15 @@
 
 .zoom{
     transition: transform .2s;
+    pointer-events: all;
 }
 .zoom:hover {
     transform: scale(1.15);
+}
+
+.igual{
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    transform: scale(0.2);    
 }
