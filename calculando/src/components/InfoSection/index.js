@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from '../ButtonElement';
 import { InfoContainer, InfoRow, InfoWrapper, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap,
 Column2, ImgWrap, Img} from './InfoElements';
-import img1 from '../../images/svg-1.svg';
+import img1 from '../../images/criancas.png';
 
 const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark}) => {
   return (

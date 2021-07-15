@@ -18,7 +18,7 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type='video/mp4'></VideoBg>
       </HeroBg>
       <HeroContent>
-        <HeroH1>Aprenda matemática com o Calculando!</HeroH1>
+        <HeroH1>Aprenda matemática com o Calculando</HeroH1>
         <HeroP>
           Faça seu cadastro hoje para começar!
         </HeroP>

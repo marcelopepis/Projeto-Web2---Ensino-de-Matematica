@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const InfoContainer = styled.div`
+export const TeamContainer = styled.div`
   color: #fff;
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 
@@ -9,7 +9,7 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const InfoWrapper = styled.div `
+export const TeamWrapper = styled.div `
   display: grid;
   z-index: 1;
   height: 860px;
@@ -21,7 +21,7 @@ export const InfoWrapper = styled.div `
   justify-content: center;
 `;
 
-export const InfoRow = styled.div`
+export const TeamRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
@@ -78,11 +78,6 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
-`;
-
-export const BtnWrap = styled.div`
-  display: flex;
-  justify-content: flex-start;
 `;
 
 export const ImgWrap = styled.div`

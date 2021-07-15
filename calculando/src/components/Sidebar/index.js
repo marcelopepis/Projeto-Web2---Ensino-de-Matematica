@@ -19,7 +19,7 @@ const Sidebar = ({isOpen, toggle}) => {
         <SidebarWrapper>
           <SidebarMenu>
             <SidebarLink to="sobre">
-              Sobre
+              Sobre nós
             </SidebarLink>
             <SidebarLink to="conteudo">
               Conteúdo
@@ -27,7 +27,7 @@ const Sidebar = ({isOpen, toggle}) => {
             <SidebarLink to="tecnologias">
               Tecnologias
             </SidebarLink>
-            <SidebarLink to="equipe">
+            <SidebarLink to="/team">
               Equipe
             </SidebarLink>
             <SidebarLink to="contato">

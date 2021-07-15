@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -83,7 +83,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
   
   &:active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #2ca4f8;
   }
 `;
 
@@ -98,9 +98,10 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  background: #2ca4f8;
   white-space: nowrap;
   padding: 10px 22px;
+  margin-right: 20px;
   color: #010606;
   font-size: 16px;
   outline: none;
