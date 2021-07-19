@@ -1,9 +1,13 @@
 const express = require('express');
+const routes = require('./routes');
+const mongoose = require('mongoose');
 
 const app = express();
 
-app.get('/', (req, res ) => {
-  return(res.json({message: "hello"}));
-});
+mongoose.connect('mongodb+srv://calculandoApp:OsEHxoDsVtzrFjjS@calculando.2q4ig.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+
+app.use(express.json());
+app.use(routes);
+
 
 app.listen(3333);
