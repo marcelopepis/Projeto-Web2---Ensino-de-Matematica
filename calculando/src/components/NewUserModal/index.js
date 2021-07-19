@@ -1,8 +1,7 @@
 import {React, useState} from 'react'
 import Modal from 'react-modal';
 import { Container } from './styles';
-import closeImg from '../../images/close.svg';
-import { func } from 'prop-types';
+import {api} from '../../services/api';
 
 
 
@@ -19,8 +18,15 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
   const [password, setPassword] = useState('');
 
 
-  function handleCreateNewUser(event) {
+  async function handleCreateNewUser(event) {
     event.preventDefault();
+    const response = await api.post('/users', {
+      name: name,
+      email: email,
+      password: password
+    })
+    const {_id} = response.data
+    console.log(_id);    
   }
   return(
     <>
@@ -28,12 +34,13 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
        onRequestClose={onRequestClose}
        overlayClassName="react-modal-overlay"
        className="react-modal-content"
+       ariaHideApp={false}
       >
         <Container onSubmit={handleCreateNewUser}>
           <h2>Meu Cadastro</h2>
           <input value={name} onChange={event => setName(event.target.value)} type="text" placeholder="Seu Nome"></input>
-          <input value={email} onChange={event => setEmail} type="email" placeholder="E-mail"></input>
-          <input value={password} onChange={event => setPassword} type="password" placeholder="Sua Senha"></input>  
+          <input value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="E-mail"></input>
+          <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Sua Senha"></input>  
           <button type="submit">Cadastrar</button>
         </Container>
       </Modal>
