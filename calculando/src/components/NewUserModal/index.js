@@ -1,7 +1,8 @@
-import React from 'react'
+import {React, useState} from 'react'
 import Modal from 'react-modal';
 import { Container } from './styles';
 import closeImg from '../../images/close.svg';
+import { func } from 'prop-types';
 
 
 
@@ -12,6 +13,15 @@ interface NewUserModalProps {
 
 
 const NewUserModal = ({isOpen, onRequestClose}) => {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+
+  function handleCreateNewUser(event) {
+    event.preventDefault();
+  }
   return(
     <>
       <Modal isOpen ={isOpen}
@@ -19,14 +29,11 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
        overlayClassName="react-modal-overlay"
        className="react-modal-content"
       >
-        <button type="button" onClick={onRequestClose} class="react-modal-close">
-          <img src={closeImg} alt="Fechar"/>
-        </button>       
-        <Container>
+        <Container onSubmit={handleCreateNewUser}>
           <h2>Meu Cadastro</h2>
-          <input type="text" placeholder="Seu Nome"></input>
-          <input type="email" placeholder="E-mail"></input>
-          <input type="password" placeholder="Sua Senha"></input>  
+          <input value={name} onChange={event => setName(event.target.value)} type="text" placeholder="Seu Nome"></input>
+          <input value={email} onChange={event => setEmail} type="email" placeholder="E-mail"></input>
+          <input value={password} onChange={event => setPassword} type="password" placeholder="Sua Senha"></input>  
           <button type="submit">Cadastrar</button>
         </Container>
       </Modal>
