@@ -7,7 +7,11 @@ module.exports = {
     const email = req.body.email;
     const password = req.body.password;
 
-    const user = await User.create({name, email, password});
+    let user = await User.findOne({email, password});
+
+    if(!user) {
+      user = await User.create({name, email, password});
+    };
 
     return res.json(user);
   }
