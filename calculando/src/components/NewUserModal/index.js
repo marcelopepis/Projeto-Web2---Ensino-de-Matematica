@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal';
 import { Container } from './styles';
+import closeImg from '../../images/close.svg';
 
 
 
@@ -17,7 +18,10 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
        onRequestClose={onRequestClose}
        overlayClassName="react-modal-overlay"
        className="react-modal-content"
-      >          
+      >
+        <button type="button" onClick={onRequestClose} class="react-modal-close">
+          <img src={closeImg} alt="Fechar"/>
+        </button>       
         <Container>
           <h2>Meu Cadastro</h2>
           <input type="text" placeholder="Seu Nome"></input>
