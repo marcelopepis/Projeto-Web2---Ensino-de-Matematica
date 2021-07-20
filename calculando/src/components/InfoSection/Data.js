@@ -39,7 +39,7 @@ export const homeObjThree = {
   lightTextDesc: true,
   topLine: 'Calculando',
   headLine: 'Aprenda Aritmética de Forma Interativa',
-  description: 'O Calculando foi criado para auxiliar no ensino de Aritmética de forma interativa, nele é possível selecionar operações utilizando adição, a subtração, a multiplicação e a divisão, além de operações mais avançadas como porcentagens, raiz quadrada, exponenciação e funções logarítmicas.',
+  description: 'O Calculando foi criado para auxiliar no ensino de Aritmética de forma interativa, nele é possível selecionar operações utilizando adição, a subtração, a multiplicação e a divisão, além de operações mais avançadas como porcentagens, raiz quadrada, exponenciação e equação logarítmicas.',
   buttonLabel: 'Comece Agora',
   imgStart: false,
   img: require('../../images/conteudo.svg').default,
