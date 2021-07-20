@@ -4,9 +4,7 @@ module.exports = ({email, message, subject}) =>{
 
     const user = process.env.USER;
     const pass = process.env.PASS;
-    console.log(user);
-    console.log(pass);
-
+    
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
@@ -21,6 +19,6 @@ module.exports = ({email, message, subject}) =>{
     }).then(info=>{
       console.log("email enviado");
     }).catch(error => {
-      console.log("erro ao enviar email.");
+      console.log(error);
     });
 };
