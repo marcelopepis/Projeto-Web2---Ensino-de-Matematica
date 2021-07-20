@@ -5,10 +5,10 @@ import {api} from '../../services/api';
 
 
 
-interface NewUserModalProps {
+/*interface NewUserModalProps {
   isOpen: Boolean;
   onRequestClose: () => void;
-}
+}*/
 
 
 const NewUserModal = ({isOpen, onRequestClose}) => {
