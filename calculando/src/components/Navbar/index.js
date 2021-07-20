@@ -18,10 +18,10 @@ const Navbar = ({ toggle }) => {
               <NavLinks to='about'>Sobre nós</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='conteudo'>Conteúdo</NavLinks>
+              <NavLinks to='tecnologias'>Tecnologias</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='tecnologias'>Tecnologias</NavLinks>
+              <NavLinks to='conteudo'>Conteúdo</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to='/team'>Equipe</NavLinks>
