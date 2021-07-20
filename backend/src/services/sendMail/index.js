@@ -1,16 +1,11 @@
 const nodemailer = require('nodemailer');
 
-
-
-
 module.exports = ({email, message, subject}) =>{
 
-    console.log(email);
-    console.log(message);
-    console.log(subject);
-
-    const user = "calculando.contato@gmail.com";
-    const pass = "$82UV2p6";
+    const user = process.env.USER;
+    const pass = process.env.PASS;
+    console.log(user);
+    console.log(pass);
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
