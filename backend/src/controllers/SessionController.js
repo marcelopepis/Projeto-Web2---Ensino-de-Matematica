@@ -16,7 +16,7 @@ module.exports = {
       user = await User.create({name, email, password});
     };
 
-    SendMailTo({email:email, message:"mensagem de teste para envio de emails nodejs", subject:"E-mail Teste"})
+    SendMailTo({email:email, message:"Seu usuário na plataforma Calculando foi criado!", subject:"Usuário Criado"})
 
     return res.json(user);
   },
