@@ -19,6 +19,19 @@ module.exports = {
     SendMailTo({email:email, message:"mensagem de teste para envio de emails nodejs", subject:"E-mail Teste"})
 
     return res.json(user);
+  },
+
+  async login(req, res) {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    let user = await User.findOne({email, password});
+
+    if(!user) {
+      return res.json("user not found");
+    }else{
+      return res.json(user);
+    }
   }
   
 };
