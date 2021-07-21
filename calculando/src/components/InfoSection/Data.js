@@ -60,7 +60,24 @@ export const homeObjFour = {
   buttonLabel: 'Comece Agora',
   imgStart: true,
   img: require('../../images/equipe.png').default,
-  alt: 'tecnologias',
+  alt: 'equipe',
+  dark: false,
+  primary: false,
+  darkText: true
+};
+
+export const homeObjFive = {
+  id: 'contato',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Fale conosco',
+  headLine: 'Caso possua alguma crítica ou sugestão, nos envie um e-mail',
+  description: 'Nosso time o responderá assim que possível!',
+  buttonLabel: 'Comece Agora',
+  imgStart: true,
+  img: require('../../images/contato.png').default,
+  alt: 'contato',
   dark: false,
   primary: false,
   darkText: true
