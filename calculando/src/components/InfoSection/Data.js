@@ -20,7 +20,7 @@ export const homeObjTwo = {
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'Tecnologias Usadas',
+  topLine: 'Tecnologias Utilizadas',
   headLine: 'ReactJS, NodeJS, MongoDB',
   description: 'Uma ferramenta de estudos utilizando o mais recente em tecnologia Web!',
   buttonLabel: 'Comece Agora',
@@ -47,4 +47,21 @@ export const homeObjThree = {
   dark: true,
   primary: true,
   darkText: false
+};
+
+export const homeObjFour = {
+  id: 'team',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Equipe de Desenvolvimento',
+  headLine: 'Estudantes de Engenharia de Software',
+  description: 'Nossa equipe é composta por Cláudia Ramos, Josiane Pepis, Marcelo Pepis e Yohan Pessanha.',
+  buttonLabel: 'Comece Agora',
+  imgStart: true,
+  img: require('../../images/equipe.png').default,
+  alt: 'tecnologias',
+  dark: false,
+  primary: false,
+  darkText: true
 };

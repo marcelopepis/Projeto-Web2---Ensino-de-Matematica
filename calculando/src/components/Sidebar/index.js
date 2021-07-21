@@ -27,7 +27,7 @@ const Sidebar = ({isOpen, toggle}) => {
             <SidebarLink to="tecnologias">
               Tecnologias
             </SidebarLink>
-            <SidebarLink to="/team">
+            <SidebarLink to="team">
               Equipe
             </SidebarLink>
             <SidebarLink to="contato">
