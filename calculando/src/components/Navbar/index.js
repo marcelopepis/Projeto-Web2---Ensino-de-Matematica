@@ -23,7 +23,6 @@ const Navbar = ({ toggle }) => {
         <NavbarContainer>
           <LoginModal isOpen={isLoginModalOpen}
                       onRequestClose={handleCloseLoginModalOpen}>
-
           </LoginModal>
           <NavLogo to='/'>
             Calculando

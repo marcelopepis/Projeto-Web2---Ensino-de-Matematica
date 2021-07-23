@@ -74,7 +74,7 @@ export const homeObjFive = {
   topLine: 'Fale conosco',
   headLine: 'Caso possua alguma crítica ou sugestão, nos envie um e-mail',
   description: 'Nosso time o responderá assim que possível!',
-  buttonLabel: 'Comece Agora',
+  buttonLabel: 'Envie uma mensagem',
   imgStart: true,
   img: require('../../images/contato.png').default,
   alt: 'contato',
