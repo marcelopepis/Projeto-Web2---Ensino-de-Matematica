@@ -1,14 +1,32 @@
-import React from 'react';
+import {React, useState} from 'react';
 import {Button} from '../ButtonElement';
 import { InfoContainer, InfoRow, InfoWrapper, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap,
 Column2, ImgWrap, Img} from './InfoElements';
-//import img1 from '../../images/criancas.png';
+import EmailModal from '../EmailModal';
 
-const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark}) => {
+
+
+
+const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark, onClick}) => {
+
+  const [isNewUserModalOpen, setisNewUserModalOpen ] =useState(false);
+
+  function handleOpenNewUserModal() {
+    setisNewUserModalOpen(true);
+  };
+
+  function handleCloseNewUserModalOpen() {
+    setisNewUserModalOpen(false);
+  };
+
+
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
+          <EmailModal isOpen={isNewUserModalOpen} onRequestClose={handleCloseNewUserModalOpen} >
+
+          </EmailModal>
           <InfoRow imgStart= {imgStart}>
             <Column1>
               <TextWrapper>
@@ -18,6 +36,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkT
                 <BtnWrap>
                   <Button to='home' smooth ={true}
                   duration={500}
+                  onClick={handleOpenNewUserModal}
                   spy={true}
                   exact="true"
                   offset={-80}

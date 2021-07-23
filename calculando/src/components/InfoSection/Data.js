@@ -78,6 +78,7 @@ export const homeObjFive = {
   imgStart: true,
   img: require('../../images/contato.png').default,
   alt: 'contato',
+  onclick:"{handleOpenNewUserModal}",
   dark: false,
   primary: false,
   darkText: true
