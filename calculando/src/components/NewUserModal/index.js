@@ -1,9 +1,9 @@
-import {React, useState} from 'react'
+import {React, useState, version} from 'react'
 import Modal from 'react-modal';
 import { Container } from './styles';
 import {api} from '../../services/api';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 /*interface NewUserModalProps {
@@ -30,6 +30,7 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
     const {_id} = response.data
     console.log(_id);    
   }
+
   return(
     <>
       <Modal isOpen ={isOpen}
@@ -40,11 +41,11 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
       >
         <Container onSubmit={handleCreateNewUser}>
           <h2>Meu Cadastro</h2>
-          <FormControlLabel control={<Switch/>} onChange={event => setRole(event.target.value)} label="Professor" />
+          <FormControlLabel id="chkbtn"control={<Checkbox/>} label="Professor" />
           <input value={name} onChange={event => setName(event.target.value)} type="text" placeholder="Seu Nome"></input>
           <input value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="E-mail"></input>
           <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Sua Senha"></input>  
-          <button type="submit" onClick={console.log(role)}>Cadastrar</button>
+          <button type="submit">Cadastrar</button>
         </Container>
 
       </Modal>
