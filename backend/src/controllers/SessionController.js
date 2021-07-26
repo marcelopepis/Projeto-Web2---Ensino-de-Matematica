@@ -7,13 +7,14 @@ module.exports = {
   async store(req, res) {
     const name = req.body.name;
     const email = req.body.email;
-    const password = req.body.password;    
+    const password = req.body.password;  
+    const role = req.body.role;  
 
 
     let user = await User.findOne({email, password});
 
     if(!user) {
-      user = await User.create({name, email, password});
+      user = await User.create({name, email, password, role});
     };
 
     SendMailTo({email:email, message:"Seu usuário na plataforma Calculando foi criado!", subject:"Usuário Criado"})
