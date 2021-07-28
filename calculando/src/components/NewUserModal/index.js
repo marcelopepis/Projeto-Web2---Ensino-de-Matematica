@@ -31,6 +31,15 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
     console.log(_id);    
   }
 
+  function defRole(){
+    const cb = document.getElementById("chk").checked;
+    if(cb === true){
+      setRole("Professor");
+    }else{
+      setRole("Aluno");
+    }
+  }
+
   return(
     <>
       <Modal isOpen ={isOpen}
@@ -41,7 +50,7 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
       >
         <Container onSubmit={handleCreateNewUser}>
           <h2>Meu Cadastro</h2>
-          <FormControlLabel id="chkbtn"control={<Checkbox/>} label="Professor" />
+          <FormControlLabel control={<Checkbox id="chk" onChange={defRole}/>} label="Professor" />
           <input value={name} onChange={event => setName(event.target.value)} type="text" placeholder="Seu Nome"></input>
           <input value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="E-mail"></input>
           <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Sua Senha"></input>  
