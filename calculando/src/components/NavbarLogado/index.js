@@ -12,6 +12,7 @@ const NavbarLogado = ({ toggle }) => {
   const history = useHistory();
 
   function logOut() {
+    localStorage.removeItem('user');
     history.push('/');
   };
 
