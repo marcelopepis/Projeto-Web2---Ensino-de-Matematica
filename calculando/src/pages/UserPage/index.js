@@ -1,5 +1,23 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
+import SidebarLogado from '../../components/SidebarLogado';
+import NavbarLogado from '../../components/NavbarLogado';
+import {Container} from './styles';
 
-export default function UserPage() {
-  return <div />
-};
+
+const UserPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  }
+  
+  return(
+      <Container>
+        <SidebarLogado isOpen={isOpen} toggle={toggle} />
+        <NavbarLogado toggle={toggle} />
+        
+      </Container>
+  );
+}
+
+export default UserPage

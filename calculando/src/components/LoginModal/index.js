@@ -47,7 +47,7 @@ const LoginModal = ({isOpen, onRequestClose}) => {
           <h2>Entrar</h2>
           <input value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="E-mail"></input>
           <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Sua Senha"></input>  
-          <button to="/userpage" type="submit">Login</button>
+          <button type="submit">Login</button>
         </Container>
       </Modal>
     </>
