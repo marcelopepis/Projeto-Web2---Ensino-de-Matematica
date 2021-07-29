@@ -7,12 +7,13 @@ export const Container = styled.div`
   position: absolute;
   align-self: center;
   margin-top: 10%;
+  margin-left: 30%;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(1, 5fr);
     transition: all 0.2s ease-in-out;
-    margin-left: 25%;
-    margin-top: 1%;
+    margin-left: 35%;
+    margin-top: 5%;
   }
 `;
 

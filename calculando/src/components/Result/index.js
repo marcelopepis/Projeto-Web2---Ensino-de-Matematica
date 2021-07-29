@@ -26,13 +26,14 @@ const useStyles = makeStyles({
   }
 });
 
-export default function LeftNumber() {
+export default function Result() {
   const classes = useStyles();
+
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.number} variant="h5" component="h2">
-          5
+          35
         </Typography>
       </CardContent>
     </Card>
