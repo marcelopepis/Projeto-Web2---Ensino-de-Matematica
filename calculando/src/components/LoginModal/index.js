@@ -24,11 +24,7 @@ const LoginModal = ({isOpen, onRequestClose}) => {
       password: password
     })
     const {_id} = response.data
-    if(!_id){
-      console.log(response.data);
-    }else{
-      console.log(_id);    
-    }    
+    localStorage.setItem('user', _id);
   }
   return(
     <>
