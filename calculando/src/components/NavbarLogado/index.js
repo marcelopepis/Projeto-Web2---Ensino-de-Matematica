@@ -41,6 +41,9 @@ const NavbarLogado = ({ toggle }) => {
             <NavItem>
               <NavLinks to='/userresults'>Meus Resultados</NavLinks>
             </NavItem>
+            <NavItem>
+              <NavLinks to='/testpage'>Testes</NavLinks>
+            </NavItem>
           </NavMenu>
           <NavBtn>
             <NavBtnLink onClick={logOut}>Sair</NavBtnLink>

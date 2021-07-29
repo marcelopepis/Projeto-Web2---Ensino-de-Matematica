@@ -24,6 +24,9 @@ const SidebarLogado = ({isOpen, toggle}) => {
             <SidebarLink to="/userresults">
               Meus Resultados
             </SidebarLink>
+            <SidebarLink to="/testpage">
+              Testes
+            </SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
             <SidebarRouter to="/">
