@@ -48,7 +48,7 @@ const Navbar = ({ toggle }) => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to='/signin' onClick={handleOpenLoginModal}>Acessar</NavBtnLink>
+            <NavBtnLink onClick={handleOpenLoginModal}>Acessar</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
