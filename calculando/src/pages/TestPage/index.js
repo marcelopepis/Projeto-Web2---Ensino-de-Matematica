@@ -28,6 +28,9 @@ const TestPage = () => {
     setNumberRight(number[1]);
   }, []);
 
+  console.log("numero 1: "+numberLeft);
+  console.log("numero 2: "+numberRight);
+
   
 
   const toggle = () => {
@@ -42,9 +45,9 @@ const TestPage = () => {
       <Container>
         <LeftNumber number={numberLeft}></LeftNumber>
         <Operation></Operation>
-        <RightNumber></RightNumber>
+        <RightNumber number= {numberRight}></RightNumber>
         <Equals></Equals>
-        <Result></Result>
+        <Result leftNumber = {numberLeft} rightNumber = {numberRight}></Result>
       </Container>
     </Test>    
   )

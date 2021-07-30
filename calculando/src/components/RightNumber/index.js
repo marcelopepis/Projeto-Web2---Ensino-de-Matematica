@@ -26,16 +26,17 @@ const useStyles = makeStyles({
   }
 });
 
-export default function RightNumber() {
+const RightNumber = ({number}) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.number} variant="h5" component="h2">
-          7
+          {number}
         </Typography>
       </CardContent>
     </Card>
   );
-}
+};
+export default RightNumber;
