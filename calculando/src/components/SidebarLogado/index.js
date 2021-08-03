@@ -9,7 +9,22 @@ import {
   SideBtnWrap,
   SidebarRouter
   } from './SidebarElements';
+import { useHistory } from 'react-router';
+
+
 const SidebarLogado = ({isOpen, toggle}) => {
+  const history = useHistory();
+
+  function toUserResults() {
+    history.push('/userresults');
+  };
+
+  function toTestPage() {
+    history.push('/testpage');
+  }
+  function toUserPage() {
+    history.push('/userpage')
+  }
   return (
     <>
       <SidebarContainer isOpen={isOpen} onClick={toggle} >
@@ -18,13 +33,13 @@ const SidebarLogado = ({isOpen, toggle}) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="/userpage">
+            <SidebarLink to="/userpage" onClick={toUserPage}>
               Minha Página
             </SidebarLink>
-            <SidebarLink to="/userresults">
+            <SidebarLink to="/userresults" onClick={toUserResults}>
               Meus Resultados
             </SidebarLink>
-            <SidebarLink to="/testpage">
+            <SidebarLink to="/testpage" onClick={toTestPage}>
               Testes
             </SidebarLink>
           </SidebarMenu>
