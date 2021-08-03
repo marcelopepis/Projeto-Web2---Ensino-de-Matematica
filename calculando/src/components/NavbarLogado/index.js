@@ -6,7 +6,7 @@ import { useHistory } from 'react-router';
 
 
 
-const NavbarLogado = ({ toggle }) => {
+const NavbarLogado = ({ toggle,  }) => {
 
   const [isLoginModalOpen, setisLoginModalOpen ] =useState(false);
   const history = useHistory();
@@ -15,6 +15,19 @@ const NavbarLogado = ({ toggle }) => {
     localStorage.removeItem('user');
     history.push('/');
   };
+
+  function toUserResults() {
+    history.push('/userresults');
+  };
+
+  function toTestPage() {
+    history.push('/testpage');
+  }
+
+  function toUserPage() {
+    history.push('/userpage')
+  }
+
 
   function handleCloseLoginModalOpen() {
     setisLoginModalOpen(false);
@@ -36,13 +49,13 @@ const NavbarLogado = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about'>Minha Página</NavLinks>
+              <NavLinks to='about' onClick = {toUserPage}>Minha Página</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/userresults'>Meus Resultados</NavLinks>
+              <NavLinks to='/userresults' onClick = {toUserResults}>Meus Resultados</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/testpage'>Testes</NavLinks>
+              <NavLinks to='/testpage' onClick = {toTestPage}>Testes</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
