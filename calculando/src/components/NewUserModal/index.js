@@ -42,6 +42,7 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
     const cb = document.getElementById("chk").checked;
     if(cb === true){
       setRole("Professor");
+      setId_class("none")
     }else{
       setRole("Aluno");
     }
