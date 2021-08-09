@@ -15,7 +15,6 @@ const UserPage = () => {
       <Container>
         <SidebarLogado isOpen={isOpen} toggle={toggle} />
         <NavbarLogado toggle={toggle} />
-        
       </Container>
   );
 }
