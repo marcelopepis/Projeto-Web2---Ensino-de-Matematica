@@ -25,10 +25,13 @@ const LoginModal = ({isOpen, onRequestClose}) => {
       email: email,
       password: password
     })
-    const {_id} = response.data
+    console.log(response.data);
+    const {_id} = response.data;
+    const {role} = response.data;
     
     if(_id != null){
       localStorage.setItem('user', _id);
+      localStorage.setItem('role', role);
       history.push("/userpage");
     }else{
       window.alert("usuário não existente ou senha incorreta!");

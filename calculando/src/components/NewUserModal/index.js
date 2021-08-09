@@ -1,4 +1,4 @@
-import {React, useState, version} from 'react'
+import {React, useState} from 'react'
 import Modal from 'react-modal';
 import { Container } from './styles';
 import {api} from '../../services/api';

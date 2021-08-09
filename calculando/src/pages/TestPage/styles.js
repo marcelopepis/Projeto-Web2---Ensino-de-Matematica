@@ -19,5 +19,5 @@ export const Container = styled.div`
 
 export const Test = styled.div`
   vertical-align: middle;
-  margin-top: 70px;
+  margin-top: 50px;
 `;

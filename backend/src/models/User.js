@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
   password: String,
   role: String,
   wrong_answers: Number,
-  right_ansewers: Number,
+  right_answers: Number,
   id_class: String,
 });
 

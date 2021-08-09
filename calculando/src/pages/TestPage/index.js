@@ -14,15 +14,17 @@ const TestPage = () => {
   const [numberLeft, setNumberLeft ] = useState('');
   const [numberRight, setNumberRight ] = useState('');
 
+  function GenerateNumber() {
+    var max = Math.ceil(10);
+    var min = Math.floor(0);
+    var numberOne =  Math.floor(Math.random() * (max - min + 1)) + min;
+    var numberTwo =  Math.floor(Math.random() * (max - min + 1)) + min;
+
+    return([numberOne, numberTwo]);
+  }
+
   useEffect(() => {
-    function GenerateNumber() {
-      var max = Math.ceil(10);
-      var min = Math.floor(0);
-      var numberOne =  Math.floor(Math.random() * (max - min + 1)) + min;
-      var numberTwo =  Math.floor(Math.random() * (max - min + 1)) + min;
-  
-      return([numberOne, numberTwo]);
-    }
+    
     var number = GenerateNumber();
     setNumberLeft(number[0]);
     setNumberRight(number[1]);

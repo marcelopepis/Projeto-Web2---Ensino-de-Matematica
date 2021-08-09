@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { FaBars } from 'react-icons/fa';
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavBarElements';
 import LoginModal from '../LoginModal';
@@ -13,6 +13,7 @@ const NavbarLogado = ({ toggle,  }) => {
 
   function logOut() {
     localStorage.removeItem('user');
+    localStorage.removeItem('role');
     history.push('/');
   };
 
@@ -33,6 +34,10 @@ const NavbarLogado = ({ toggle,  }) => {
     setisLoginModalOpen(false);
   };
 
+  function toMyClassesPage() {
+    history.push('/myclasses');
+  }
+
 
   return (
     <>
@@ -50,6 +55,9 @@ const NavbarLogado = ({ toggle,  }) => {
           <NavMenu>
             <NavItem>
               <NavLinks to='about' onClick = {toUserPage}>Minha Página</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to='about' onClick = {toMyClassesPage}>Minhas Classes</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to='/userresults' onClick = {toUserResults}>Meus Resultados</NavLinks>

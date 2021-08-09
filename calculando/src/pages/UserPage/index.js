@@ -1,4 +1,4 @@
-import {React, useEffect, useState} from 'react';
+import {React, useState} from 'react';
 import SidebarLogado from '../../components/SidebarLogado';
 import NavbarLogado from '../../components/NavbarLogado';
 import {Container} from './styles';

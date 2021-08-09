@@ -8,13 +8,16 @@ module.exports = {
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;  
-    const role = req.body.role;  
+    const role = req.body.role;
+    const wrong_answers = req.body.wrong_answers;
+    const right_answers = req.body.right_answers;
+    const id_class = req.body.id_class;
 
 
     let user = await User.findOne({email, password});
 
     if(!user) {
-      user = await User.create({name, email, password, role});
+      user = await User.create({name, email, password, role, id_class, wrong_answers, right_answers});
     };
 
     SendMailTo({email:email, message:"Seu usuário na plataforma Calculando foi criado!", subject:"Usuário Criado"})
@@ -33,6 +36,5 @@ module.exports = {
     }else{
       return res.json(user);
     }
-  }
-  
+  }  
 };
