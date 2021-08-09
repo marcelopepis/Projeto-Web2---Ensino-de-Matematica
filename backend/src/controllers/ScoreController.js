@@ -14,7 +14,7 @@ module.exports = {
   async updateWrong(req, res) {
     const _id = req.body.id_user;
 
-    let user = await User.findOneAndUpdate({_id}, {$inc : {'right_answers' : 1}});
+    let user = await User.findOneAndUpdate({_id}, {$inc : {'wrong_answers' : 1}});
 
     return res.json({wrong_answers: user.wrong_answers});
   }
