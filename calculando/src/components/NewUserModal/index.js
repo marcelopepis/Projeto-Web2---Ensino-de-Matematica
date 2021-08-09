@@ -18,13 +18,20 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
+  const [id_class, setId_class] = useState('');
+  const [right_answers, setRight_answers] = useState('0');
+  const [wrong_answers, setWrong_answers] = useState('0')
+
 
   async function handleCreateNewUser(event) {
     event.preventDefault();
     const response = await api.post('/users', {
       name: name,
       email: email,
+      id_class: id_class,
       password: password,
+      wrong_answers,
+      right_answers,
       role: role
     })
     const {_id} = response.data
@@ -51,9 +58,10 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
         <Container onSubmit={handleCreateNewUser}>
           <h2>Meu Cadastro</h2>
           <FormControlLabel control={<Checkbox id="chk" onChange={defRole}/>} label="Professor" />
-          <input value={name} onChange={event => setName(event.target.value)} type="text" placeholder="Seu Nome"></input>
-          <input value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="E-mail"></input>
-          <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Sua Senha"></input>  
+          <input value={name} onChange={event => setName(event.target.value)} required type="text" placeholder="Seu Nome"></input>
+          <input value={id_class} onChange={event => setId_class(event.target.value)} type="text" required placeholder="Código da sua Turma"></input>
+          <input value={email} onChange={event => setEmail(event.target.value)} required type="email" placeholder="E-mail"></input>
+          <input value={password} onChange={event => setPassword(event.target.value)} required type="password" placeholder="Sua Senha"></input>  
           <button type="submit">Cadastrar</button>
         </Container>
 
