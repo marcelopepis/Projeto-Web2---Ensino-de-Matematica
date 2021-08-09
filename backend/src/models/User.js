@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
   role: String,
   wrong_answers: Number,
   right_ansewers: Number,
-  id_turma: String,
+  id_class: String,
 });
 
 module.exports = mongoose.model('User', UserSchema);
