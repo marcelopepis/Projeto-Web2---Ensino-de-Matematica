@@ -3,6 +3,7 @@ const Class = require('../models/Class');
 
 module.exports = {
 
+  //cadastra um nova turma no banco.
   async store(req, res) {
     const id_class = req.body.id_class;
     const class_name = req.body.class_name;
@@ -17,6 +18,7 @@ module.exports = {
     return res.json(turma);
   },
 
+  //lista todas as classes de um professor, mediante a informação da id do professor.
   async listClasses(req, res) {
     const id_professor = req.body.id_professor;
 
@@ -25,6 +27,7 @@ module.exports = {
     return res.json(classes);
   },
 
+  //lista todos os membros de uma tuma/class informada
   async listClassMembers(req, res) {
     const id_class = req.body.id_class;
 
