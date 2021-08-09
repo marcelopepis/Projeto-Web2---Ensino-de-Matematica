@@ -5,6 +5,9 @@ const UserSchema = new mongoose.Schema({
   email: String,
   password: String,
   role: String,
+  wrong_answers: Number,
+  right_ansewers: Number,
+  id_turma: String,
 });
 
 module.exports = mongoose.model('User', UserSchema);
