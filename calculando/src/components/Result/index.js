@@ -57,10 +57,9 @@ const Result = ({leftNumber, rightNumber }) => {
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
-        <Typography className={classes.number} variant="h5" component="h2">
+        <Typography className={classes.number} variant="h5" component="h2" >
           <input placeholder="Resultado" value={userResult} onChange={event => setUserResult(event.target.value)}></input>
           <button type="submit" onClick = {CheckResult}>Go</button>
-
         </Typography>
       </CardContent>
     </Card>
