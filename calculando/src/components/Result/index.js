@@ -2,7 +2,6 @@ import {React, useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
@@ -15,6 +14,7 @@ const useStyles = makeStyles({
     margin: '0 2px',
     transform: 'scale(0.8)',
   },
+
   title: {
     fontSize: 14,
   },
@@ -23,6 +23,12 @@ const useStyles = makeStyles({
     fontSize: 30,
     position: 'relative',
     margin: '39%',
+  },
+
+  input:{
+    display:'flex', 
+    marginTop:'50px',
+    justifyContent:'center',
   }
 });
 
@@ -56,11 +62,9 @@ const Result = ({leftNumber, rightNumber }) => {
 
   return (
     <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography className={classes.number} variant="h5" component="h2" >
-          <input placeholder="Resultado" value={userResult} onChange={event => setUserResult(event.target.value)}></input>
+      <CardContent className={classes.input} >
+          <input id={result} placeholder="Resultado" value={userResult} onChange={event => setUserResult(event.target.value)} size="6"></input>
           <button type="submit" onClick = {CheckResult}>Go</button>
-        </Typography>
       </CardContent>
     </Card>
   );
