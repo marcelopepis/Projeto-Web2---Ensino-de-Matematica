@@ -38,7 +38,7 @@ export default function ResultsCard() {
         </Typography>
         <Typography variant="body2" component="p" color="textSecondary">
           <br />
-          Voce colocou *resultado*
+          Voce colocou *resultado*!
           <br />
           <br />
           Quando *Numero 1* x *Numero 2* é igual a *Numero 3*!
