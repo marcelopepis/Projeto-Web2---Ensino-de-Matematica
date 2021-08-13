@@ -1,7 +1,8 @@
 import {React, useState} from 'react';
+import ResultsCard from '../../components/ResultsCard';
 import SidebarLogado from '../../components/SidebarLogado';
-import NavbarLogado from '../../components/NavbarLogado';
-import {Container} from './styles';
+import NavBarLogado from '../../components/NavbarLogado';
+import {Cards, Container} from './styles';
 
 
 const UserResults = () => {
@@ -12,10 +13,13 @@ const UserResults = () => {
   }
   
   return(
+    <Cards>
+      <SidebarLogado isOpen={isOpen} toggle={toggle}/>
+      <NavBarLogado toggle={toggle} />
       <Container>
-        <SidebarLogado isOpen={isOpen} toggle={toggle} />
-        <NavbarLogado toggle={toggle} />
-      </Container>
+      <ResultsCard>A</ResultsCard>
+      </Container>      
+    </Cards>
   );
 }
 
