@@ -5,6 +5,7 @@ import Home from './pages/index';
 import TestPage from "./pages/TestPage";
 import MyClasses from "./pages/MyClasses";
 import UserResults from "./pages/UserResults";
+import PrivateRoute from "./PrivateRoute";
 
 
 export default function Routes() {
@@ -12,10 +13,10 @@ export default function Routes() {
     <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Home}/>
-      <Route path="/userpage" exact component={UserPage}/>
-      <Route path="/testpage" exact component={TestPage}/>
-      <Route path="/myclasses" exact component={MyClasses}/>
-      <Route path="/userresults" exact component={UserResults}/>
+      <PrivateRoute path="/userpage" exact component={UserPage}/>
+      <PrivateRoute path="/testpage" exact component={TestPage}/>
+      <PrivateRoute path="/myclasses" exact component={MyClasses}/>
+      <PrivateRoute path="/userresults" exact component={UserResults}/>
     </Switch>
     </BrowserRouter>
   );
