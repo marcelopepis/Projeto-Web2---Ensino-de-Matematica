@@ -22,4 +22,6 @@ Por fim, um breve guia de como executar o projeto foi descrito.
 
 O documento referente a essa iteração pode ser visto [aqui](https://github.com/marcelopepis/Projeto-Web2---Ensino-de-Matematica/blob/main/Documentos/Projeto%20Calculando%20-%20Ciclo%202.docx "Documento 2") e, como possível notar, sofreu diversas modificações quando comparado com o [anterior](https://github.com/marcelopepis/Projeto-Web2---Ensino-de-Matematica/blob/main/Documentos/Projeto%20Calculando%20-%20Ciclo%201.docx "Documento 1"). Isto ocorreu porque, nessa etapa, o grupo apresentou uma melhor comunicação e colaboração, resultando em um melhor resultado.  
 
-Aqui ocorreu uma alteração na atribuição dos papéis, foi adicionado o [MongoDB](https://www.mongodb.com/) nas tecnologias utilizadas, 
+Aqui ocorreu uma alteração na atribuição dos papéis, foi inserido [MongoDB](https://www.mongodb.com/) no lugar do PostgreSQL nas tecnologias utilizadas, além de uma adição de diversos requisitos funcionais.  
+
+Quanto ao desenvolvimento, as telas da Homepage\(Sobre Nós, Tecnologias, Conteúdo, Equipe e Contato), Cadastro e Login foram desenvolvidas. Também foi necessário adicionar novos comandos no guia ao final do documento para conectar o site com o banco de dados.
