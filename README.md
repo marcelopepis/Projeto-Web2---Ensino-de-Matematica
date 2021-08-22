@@ -14,6 +14,7 @@ Nessa etapa ocorreu a criação do [documento](https://github.com/marcelopepis/P
 - Yohan Duarte Pessanha  
 
 Foi também estabelecido um cargo para cada um dos participantes, além de definidas as tecnologias utilizadas no projeto, o cronograma previsto, os requisitos funcionais e não funcionais e o logo do website e da página inicial.  
+
 Por fim, um breve guia de como executar o projeto foi descrito.
 
 
