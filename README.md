@@ -24,4 +24,4 @@ O documento referente a essa iteração pode ser visto [aqui](https://github.com
 
 Aqui ocorreu uma alteração na atribuição dos papéis, foi inserido [MongoDB](https://www.mongodb.com/) no lugar do PostgreSQL nas tecnologias utilizadas, além de uma adição de diversos requisitos funcionais.  
 
-Quanto ao desenvolvimento, as telas da Homepage\(Sobre Nós, Tecnologias, Conteúdo, Equipe e Contato), Cadastro e Login foram desenvolvidas. Também foi necessário adicionar novos comandos no guia ao final do documento para conectar o site com o banco de dados.
+Quanto ao desenvolvimento, as telas da Homepage\(Sobre Nós, Tecnologias, Conteúdo, Equipe e Contato), Cadastro e Login foram desenvolvidas. Também foi necessário adicionar novas instruç no guia ao final do documento para conectar o site com o banco de dados.
