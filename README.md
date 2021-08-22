@@ -13,8 +13,7 @@ Nessa etapa ocorreu a criação do [documento](https://github.com/marcelopepis/P
 - Marcelo de Paula Pepis
 - Yohan Duarte Pessanha  
 
-Foi também estabelecido um cargo para cada um dos participantes, além de definidas as tecnologias utilizadas no projeto, o cronograma previsto, os requisitos funcionais e não funcionais e o logo do website e da página inicial.
-    ![Logo](https://github.com/marcelopepis/Projeto-Web2---Ensino-de-Matematica/blob/main/calculando/src/images/logo.png)  
+Foi também estabelecido um cargo para cada um dos participantes, além de definidas as tecnologias utilizadas no projeto, o cronograma previsto, os requisitos funcionais e não funcionais e o logo do website e da página inicial.  
 Por fim, um breve guia de como executar o projeto foi descrito.
 
 
