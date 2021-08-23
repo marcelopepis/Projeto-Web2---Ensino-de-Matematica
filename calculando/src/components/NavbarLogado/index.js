@@ -28,6 +28,9 @@ const NavbarLogado = ({ toggle,  }) => {
   function toUserPage() {
     history.push('/userpage')
   }
+  function toNewClass() {
+    history.push('/newclass');
+  }
 
 
   function handleCloseLoginModalOpen() {
@@ -58,6 +61,9 @@ const NavbarLogado = ({ toggle,  }) => {
             </NavItem>
             <NavItem>
               <NavLinks to='about' onClick = {toMyClassesPage}>Minhas Classes</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to='newclass' onClick = {toNewClass}>Cadastrar Classe</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to='/userresults' onClick = {toUserResults}>Meus Resultados</NavLinks>

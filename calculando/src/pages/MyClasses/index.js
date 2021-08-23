@@ -1,27 +1,42 @@
-import {React, useState} from 'react';
-import ClassCard from '../../components/ClassCard';
+import {React, useState, useEffect} from 'react';
 import SidebarLogado from '../../components/SidebarLogado';
 import NavBarLogado from '../../components/NavbarLogado';
-import {Cards, Container} from './styles';
+import './styles.css'
+import { api } from '../../services/api';
 
 
-const MyClasses = () => {
+export default function MyClasses(){
 
   const [isOpen, setIsOpen] = useState(false);
+  const [classes, setClasses] = useState([]);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   }
+  useEffect(() => {
+    async function loadClasses() {
+      const id_professor = localStorage.getItem('user');
+      const response = await api.post('/listclasses',{
+        id_professor:id_professor        
+      });
+      setClasses(response.data);
+    };
 
+    loadClasses()
+  }, []);
+  
   return(
-    <Cards>
+    <>
       <SidebarLogado isOpen={isOpen} toggle={toggle}/>
       <NavBarLogado toggle={toggle} />
-      <Container>
-      <ClassCard></ClassCard>
-      </Container>      
-    </Cards>
+        <ul className="classes-list">
+          {classes.map(classe =>(
+            <li key={classe.id_class}>
+              <strong>{classe.id_class}</strong>
+              <span>{classe.class_name}</span>
+            </li>
+          ))}
+        </ul>        
+    </>     
   )  
 };
-
-export default MyClasses

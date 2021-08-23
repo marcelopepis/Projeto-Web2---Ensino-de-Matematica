@@ -6,6 +6,7 @@ import TestPage from "./pages/TestPage";
 import MyClasses from "./pages/MyClasses";
 import UserResults from "./pages/UserResults";
 import PrivateRoute from "./PrivateRoute";
+import NewClass from "./pages/NewClass";
 
 
 export default function Routes() {
@@ -17,6 +18,7 @@ export default function Routes() {
       <PrivateRoute path="/testpage" exact component={TestPage}/>
       <PrivateRoute path="/myclasses" exact component={MyClasses}/>
       <PrivateRoute path="/userresults" exact component={UserResults}/>
+      <PrivateRoute path="/newclass" exact component={NewClass}/>
     </Switch>
     </BrowserRouter>
   );

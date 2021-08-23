@@ -23,8 +23,8 @@ module.exports = {
     const id_professor = req.body.id_professor;
 
     let classes = await Class.find({id_professor});
-
-    return res.json(classes);
+    
+    return res.json(classes);   
   },
 
   //lista todos os membros de uma tuma/class informada
