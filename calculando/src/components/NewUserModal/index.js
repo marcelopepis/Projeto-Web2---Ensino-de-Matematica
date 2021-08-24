@@ -14,8 +14,8 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
   const [id_class, setId_class] = useState('');
-  const [right_answers, setRight_answers] = useState('0');
-  const [wrong_answers, setWrong_answers] = useState('0')
+  const [right_answers] = useState('0');
+  const [wrong_answers] = useState('0')
 
 
   async function handleCreateNewUser(event) {
@@ -30,7 +30,7 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
       role: role
     })
     const {_id} = response.data
-    console.log(_id);    
+    alert("Usuário criando, verifique o seu e-mail!");  
   }
 
   function defRole(){

@@ -50,7 +50,7 @@ export default function MyClasses(){
                 onRequestClose={handleCloseListStudentsModalOpen}
                 class_id = {turma}>
               </ListStudentsModal>
-              <li key={classe._id} onClick={(e) => handleOpenListStudentsModal(classe.id_class, e)}>
+              <li key={classe._id} onClick={() => handleOpenListStudentsModal(classe.id_class)}>
                 <strong>{classe.id_class}</strong>
                 <span>{classe.class_name}</span>
               </li>

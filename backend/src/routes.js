@@ -9,7 +9,7 @@ routes.post('/users', SessionController.store);
 routes.post('/login', SessionController.login);
 routes.post('/classes', ClassesController.store);
 routes.post('/listClasses', ClassesController.listClasses);
-routes.get('/listclassmembers', ClassesController.listClassMembers);
+routes.post('/listclassmembers', ClassesController.listClassMembers);
 routes.post('/updateright', ScoreController.updateRight);
 routes.post('/updatewrong', ScoreController.updateWrong);
 
