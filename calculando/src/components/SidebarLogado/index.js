@@ -45,7 +45,7 @@ const SidebarLogado = ({isOpen, toggle}) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink onClick={toUserPage}>Minha Página</SidebarLink>
+            <SidebarLink  onClick={toUserPage}>Minha Página</SidebarLink>
             <SidebarLink  onClick = {toMyClassesPage}>Minhas Classes</SidebarLink>
             <SidebarLink  onClick = {toNewClass}>Cadastrar Classes</SidebarLink>
             <SidebarLink  onClick={toUserResults}>Meus Resultados</SidebarLink>
@@ -60,6 +60,5 @@ const SidebarLogado = ({isOpen, toggle}) => {
       </SidebarContainer>
     </>
   )
-}
-
+};
 export default SidebarLogado
