@@ -1,0 +1,27 @@
+ul.student-list {
+  width: auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 30px;
+  align-self: center;
+  cursor: pointer;
+}
+
+ul.classes-list li {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.classes-list li strong {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #444;
+  text-align: justify;
+}
+
+ul.classes-list li span {
+  font-size: 15px;
+  color: #999;
+}

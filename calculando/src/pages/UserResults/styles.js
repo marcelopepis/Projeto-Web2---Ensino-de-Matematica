@@ -20,5 +20,5 @@ export const Container = styled.div`
 
 export const Cards = styled.div`
   vertical-align: middle;
-  margin-top: 50px;
+  
 `;
