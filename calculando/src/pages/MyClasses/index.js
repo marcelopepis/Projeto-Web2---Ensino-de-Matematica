@@ -29,8 +29,9 @@ export default function MyClasses(){
   const [isListStudentsModalOpen, setisListStudentsModalOpen ] =useState(false);
   const [turma, setTurma] = useState([]);
 
-  function handleOpenListStudentsModal() {
+  function handleOpenListStudentsModal(classe) {
     setisListStudentsModalOpen(true);
+    setTurma(classe);
   };
 
   function handleCloseListStudentsModalOpen() {
@@ -47,9 +48,9 @@ export default function MyClasses(){
             <>
               <ListStudentsModal isOpen={isListStudentsModalOpen}
                 onRequestClose={handleCloseListStudentsModalOpen}
-                class_id = {classes[1].id_class}>
+                class_id = {turma}>
               </ListStudentsModal>
-              <li key={classe._id} onClick={handleOpenListStudentsModal}>
+              <li key={classe._id} onClick={(e) => handleOpenListStudentsModal(classe.id_class, e)}>
                 <strong>{classe.id_class}</strong>
                 <span>{classe.class_name}</span>
               </li>
