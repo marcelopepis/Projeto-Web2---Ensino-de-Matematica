@@ -45,20 +45,14 @@ const SidebarLogado = ({isOpen, toggle}) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="/userpage" onClick={toUserPage}>
-              Minha Página
-            </SidebarLink>
-            <SidebarLink to="/#" onClick = {toMyClassesPage}>Minhas Classes</SidebarLink>
-            <SidebarLink to="/#" onClick = {toNewClass}>Cadastrar Classes</SidebarLink>
-            <SidebarLink to="/userresults" onClick={toUserResults}>
-              Meus Resultados
-            </SidebarLink>
-            <SidebarLink to="/testpage" onClick={toTestPage}>
-              Testes
-            </SidebarLink>
+            <SidebarLink onClick={toUserPage}>Minha Página</SidebarLink>
+            <SidebarLink  onClick = {toMyClassesPage}>Minhas Classes</SidebarLink>
+            <SidebarLink  onClick = {toNewClass}>Cadastrar Classes</SidebarLink>
+            <SidebarLink  onClick={toUserResults}>Meus Resultados</SidebarLink>
+            <SidebarLink  onClick={toTestPage}>Testes</SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
-            <SidebarRouter to="/" onClick={logOut}>
+            <SidebarRouter onClick={logOut}>
               Sair
             </SidebarRouter>
           </SideBtnWrap>

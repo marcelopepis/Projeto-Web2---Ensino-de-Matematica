@@ -44,14 +44,8 @@ const Result = ({leftNumber, rightNumber }) => {
     setResult(number1 * number2);
   },[number1, number2, leftNumber, rightNumber]);
 
-  
-  console.log(leftNumber);
-  console.log(rightNumber);
-  console.log("informado pelo user " + userResult);
-  console.log("resultado calculado " + result);
-
   function CheckResult() {
-    if(result == userResult){
+    if(parseInt(result) === parseInt(userResult)){
       window.alert("Resultado Correto!");
     }else{
       window.alert("Resultado Incorreto");

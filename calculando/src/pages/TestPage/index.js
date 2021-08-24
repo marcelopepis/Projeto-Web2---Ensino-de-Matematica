@@ -30,11 +30,6 @@ const TestPage = () => {
     setNumberRight(number[1]);
   }, []);
 
-  console.log("numero 1: "+numberLeft);
-  console.log("numero 2: "+numberRight);
-
-  
-
   const toggle = () => {
     setIsOpen(!isOpen);
   }

@@ -49,7 +49,7 @@ const NavbarLogado = ({ toggle,  }) => {
           <LoginModal isOpen={isLoginModalOpen}
                       onRequestClose={handleCloseLoginModalOpen}>
           </LoginModal>
-          <NavLogo to='/'>
+          <NavLogo >
             Calculando
           </NavLogo>
           <MobileIcon onClick={toggle}>
@@ -57,19 +57,19 @@ const NavbarLogado = ({ toggle,  }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='/about' onClick = {toUserPage}>Minha Página</NavLinks>
+              <NavLinks onClick = {toUserPage}>Minha Página</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/about' onClick = {toMyClassesPage}>Minhas Classes</NavLinks>
+              <NavLinks onClick = {toMyClassesPage}>Minhas Classes</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/newclass' onClick = {toNewClass}>Cadastrar Classe</NavLinks>
+              <NavLinks onClick = {toNewClass}>Cadastrar Classe</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/userresults' onClick = {toUserResults}>Meus Resultados</NavLinks>
+              <NavLinks onClick = {toUserResults}>Meus Resultados</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/testpage' onClick = {toTestPage}>Testes</NavLinks>
+              <NavLinks onClick = {toTestPage}>Testes</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

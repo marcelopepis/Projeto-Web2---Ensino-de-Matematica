@@ -28,7 +28,6 @@ const useStyles = makeStyles({
 
 const LeftNumber = ({number}) => {
 
-  //console.log("numero recebido no Left: "+number);
   const classes = useStyles();
   return (
     <Card className={classes.root} variant="outlined">
