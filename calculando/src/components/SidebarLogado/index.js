@@ -15,6 +15,12 @@ import { useHistory } from 'react-router';
 const SidebarLogado = ({isOpen, toggle}) => {
   const history = useHistory();
 
+  function logOut() {
+    localStorage.removeItem('user');
+    localStorage.removeItem('role');
+    history.push('/');
+  };
+
   function toUserResults() {
     history.push('/userresults');
   };
@@ -24,6 +30,12 @@ const SidebarLogado = ({isOpen, toggle}) => {
   }
   function toUserPage() {
     history.push('/userpage')
+  }
+  function toMyClassesPage() {
+    history.push('/myclasses');
+  }
+  function toNewClass() {
+    history.push('/newclass');
   }
   return (
     <>
@@ -36,6 +48,8 @@ const SidebarLogado = ({isOpen, toggle}) => {
             <SidebarLink to="/userpage" onClick={toUserPage}>
               Minha Página
             </SidebarLink>
+            <SidebarLink to="/#" onClick = {toMyClassesPage}>Minhas Classes</SidebarLink>
+            <SidebarLink to="/#" onClick = {toNewClass}>Cadastrar Classes</SidebarLink>
             <SidebarLink to="/userresults" onClick={toUserResults}>
               Meus Resultados
             </SidebarLink>
@@ -44,7 +58,7 @@ const SidebarLogado = ({isOpen, toggle}) => {
             </SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
-            <SidebarRouter to="/">
+            <SidebarRouter to="/" onClick={logOut}>
               Sair
             </SidebarRouter>
           </SideBtnWrap>
