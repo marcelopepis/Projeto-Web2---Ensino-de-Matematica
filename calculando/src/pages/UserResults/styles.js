@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-gap: 20;
   position: absolute;
   align-self: center;
@@ -15,6 +15,23 @@ export const Container = styled.div`
     transition: all 0.2s ease-in-out;
     margin-left: 35%;
     margin-top: 5%;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 4rem;
+    background: #2ca4f8;
+    color: #fff;
+    border-radius: 0.25rem;
+    border: 0;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    transition: filter 0.2s;
+    font-weight: 600;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
 `;
 
