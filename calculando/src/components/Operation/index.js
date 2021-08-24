@@ -28,8 +28,6 @@ const useStyles = makeStyles({
 
 export default function Operation() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
-
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>

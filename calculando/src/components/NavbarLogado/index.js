@@ -57,13 +57,13 @@ const NavbarLogado = ({ toggle,  }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about' onClick = {toUserPage}>Minha Página</NavLinks>
+              <NavLinks to='/about' onClick = {toUserPage}>Minha Página</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='about' onClick = {toMyClassesPage}>Minhas Classes</NavLinks>
+              <NavLinks to='/about' onClick = {toMyClassesPage}>Minhas Classes</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='newclass' onClick = {toNewClass}>Cadastrar Classe</NavLinks>
+              <NavLinks to='/newclass' onClick = {toNewClass}>Cadastrar Classe</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to='/userresults' onClick = {toUserResults}>Meus Resultados</NavLinks>

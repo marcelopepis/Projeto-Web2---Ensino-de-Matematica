@@ -2,6 +2,7 @@ import {React, useState, useEffect} from 'react';
 import SidebarLogado from '../../components/SidebarLogado';
 import NavBarLogado from '../../components/NavbarLogado';
 import './styles.css'
+import ListStudentsModal from '../../components/ListStudentsModal';
 import { api } from '../../services/api';
 
 
@@ -24,17 +25,35 @@ export default function MyClasses(){
 
     loadClasses()
   }, []);
+
+  const [isListStudentsModalOpen, setisListStudentsModalOpen ] =useState(false);
+  const [turma, setTurma] = useState([]);
+
+  function handleOpenListStudentsModal() {
+    setisListStudentsModalOpen(true);
+  };
+
+  function handleCloseListStudentsModalOpen() {
+    setisListStudentsModalOpen(false);
+  };
   
   return(
     <>
       <SidebarLogado isOpen={isOpen} toggle={toggle}/>
       <NavBarLogado toggle={toggle} />
+      
         <ul className="classes-list">
           {classes.map(classe =>(
-            <li key={classe.id_class}>
-              <strong>{classe.id_class}</strong>
-              <span>{classe.class_name}</span>
-            </li>
+            <>
+              <ListStudentsModal isOpen={isListStudentsModalOpen}
+                onRequestClose={handleCloseListStudentsModalOpen}
+                class_id = {classes[1].id_class}>
+              </ListStudentsModal>
+              <li key={classe._id} onClick={handleOpenListStudentsModal}>
+                <strong>{classe.id_class}</strong>
+                <span>{classe.class_name}</span>
+              </li>
+            </>
           ))}
         </ul>        
     </>     

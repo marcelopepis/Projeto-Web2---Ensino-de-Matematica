@@ -6,7 +6,7 @@ import LoginModal from '../LoginModal';
 
 const Navbar = ({ toggle }) => {
 
-  const [isLoginModalOpen, setisLoginModalOpen ] =useState(false);
+  const [isLoginModalOpen, setisLoginModalOpen,] =useState(false);
 
   function handleOpenLoginModal() {
     setisLoginModalOpen(true);
