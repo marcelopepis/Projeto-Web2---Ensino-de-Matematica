@@ -8,6 +8,7 @@ import {api} from '../../services/api';
 const UserResults = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [student, setStudent] = useState([]);
+  const [new_password, setNew_password] = useState('');
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -25,11 +26,26 @@ const UserResults = () => {
     getStudent();
   },[]);
 
+  async function handleChangePassword(event) {
+    event.preventDefault();
+    const id_user = localStorage.getItem('user');
+
+    const response = await api.post('/student_password', {
+      id_user: id_user,
+      new_password: new_password
+    });
+    if(response === 200) {
+      alert("Password Alterado com Sucesso!");
+    }else{
+      alert("Erro ao trocar password!");
+    };
+  };
+
   return(
     <Cards>
       <SidebarLogado isOpen={isOpen} toggle={toggle}/>
       <NavBarLogado toggle={toggle} />
-      <Container>
+      <Container onSubmit={handleChangePassword}>
         {student.map(student => (
           <>
             <span><strong>Nome:</strong> {student.name}</span>
@@ -37,7 +53,8 @@ const UserResults = () => {
             <span><strong>Tipo:</strong> {student.role}</span>
             <span><strong>Respostas Corretas:</strong> {student.right_answers}</span>
             <span><strong>Respostas Erradas:</strong> {student.wrong_answers}</span>
-            <button type="submit">Cadastrar</button>
+            <input value={new_password} onChange={event => setNew_password(event.target.value)} type="password" required placeholder="Novo Password"></input>
+            <button type="submit">Trocar Password</button>
           </>
         ))}
       </Container>      
