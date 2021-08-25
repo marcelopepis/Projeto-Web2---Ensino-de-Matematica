@@ -10,10 +10,12 @@ export default function ListStudentsModal({isOpen, onRequestClose, class_id}){
 
   useEffect(() => {
     async function getStudents() {
-      const response = await api.post('/listclassmembers',{
-        id_class: class_id
-      });
-      setStudentList(response.data);
+      if(class_id != null){
+        const response = await api.post('/listclassmembers',{
+          id_class: class_id
+        });
+        setStudentList(response.data);
+      }      
     };
     getStudents();
   },[class_id]);
