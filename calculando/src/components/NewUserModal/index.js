@@ -29,8 +29,9 @@ const NewUserModal = ({isOpen, onRequestClose}) => {
       right_answers,
       role: role
     })
-    const {_id} = response.data
-    alert("Usuário criando, verifique o seu e-mail!");  
+    if(response != null){
+      alert("Usuário criando, verifique o seu e-mail!");  
+    }    
   }
 
   function defRole(){
